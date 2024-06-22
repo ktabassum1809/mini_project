@@ -4,10 +4,17 @@
 
 @import "variables";
 @import "../../node_modules/bootstrap/scss/bootstrap";
+@import "find-a-home.scss";
+@import "meet-our-team.scss";
+@import "work-with-us.scss";
 
 // Write your sass code here or import partials
+
+
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
