@@ -4,15 +4,23 @@
 
 @import "variables";
 @import "../../node_modules/bootstrap/scss/bootstrap";
+@import "find-a-home";
+@import "meet-our-team";
+@import "work-with-us";
 @import "discover-deals-section1";
 @import "discover-deals-section2";
 @import "designer";
 @import "footer";
 @import "question";    
 
+
 // Write your sass code here or import partials
+
+
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
