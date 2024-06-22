@@ -1,0 +1,242 @@
+.navigation {
+  &__checkbox {
+    display: none;
+  }
+  //making checkbox-hack!
+  //below is the making the hamberger menu out of button it sits on top of checkbox(display:none)
+
+  &__button {
+    background-image: radial-gradient(#e4bf2c, #9e841c);
+    height: 2.5em;
+    width: 2.5em;
+    border-radius: 50%;
+    //box-shadow: 0 1em 3em rgba(250, 249, 249, 0.8); // to make the oral effect to the button
+
+    //it is fixed to the top right corner of the screen
+    position: fixed;
+    top: 1em;
+    right: 1.5em;
+    z-index: 1000; // to keep the button on a higher ground or that it does not under anything when the user scrolls
+
+    text-align: center; // the 3stripes icon are positioned in the middle of the button
+    cursor: pointer;
+  }
+
+  @media screen and (min-width: 376px) and (max-width: 425px) {
+    &__button {
+      right: 2em;
+    }
+  }
+  @media screen and (min-width: 426px) and (max-width: 767px) {
+    &__button {
+      right: 2.5em;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    &__button {
+      height: 3.5em;
+      width: 3.5em;
+      top: 2em;
+      right: 3.5em;
+    }
+  }
+  @media screen and (min-width: 1440px) {
+    &__button {
+      right: 4.5em;
+      top: 2.5em;
+    }
+  }
+  //below is the styling of the nav-menu. It it positioned under the button and will appear when you click the checkbox
+  &__background {
+    height: 2.5em;
+    width: 2.5em;
+    border-radius: 50%;
+    position: fixed;
+    top: 1em;
+    right: 1.5em;
+    background-image: radial-gradient(#9e841c, #584701);
+    z-index: 500;
+    //transform: scale(80); it was used here to make the background bigger for styling purposes
+
+    //below is transforming technique to use the transition combined with cubic-bezier which help the transforming smoother from the button to the nav-bar when the checkbox is checked.
+    transition: all 0.8s cubic-bezier(0.5, 1, 0.89, 1);
+  }
+
+  @media screen and (min-width: 376px) and (max-width: 425px) {
+    &__background {
+      right: 2em;
+    }
+  }
+  @media screen and (min-width: 426px) and (max-width: 767px) {
+    &__button {
+      right: 2.5em;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    &__background {
+      height: 3.5em;
+      width: 3.5em;
+      top: 2em;
+      right: 3.5em;
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    &__background {
+      right: 4.5em;
+      top: 2.5em;
+    }
+  }
+
+  &__nav {
+    width: 0; // the nev-bar is now invincible. So the links are hidden too!(The width was set to 100%. But noe it is reset to 0. It will come back again when the checkbox is checked!)
+    height: 100vh;
+    position: fixed; // this section is to position the nav-bar-box in the pop-up
+    top: 0;
+    left: 0; //nav-bar is set to the left and it will moved in to the right when the checkbox is checked and move back to the left when the checkbox is unchecked!
+    z-index: 501;
+
+    opacity: 0; //to make the nav-bar invincible. Now go and reset the width to 0
+    //animating the opacity transition from the background back to the button. The transforming duration is set to 0.8s, to make a clear understanding of the transition
+    transition: all 0.8s cubic-bezier(0.34, 0.265, 0.265, 1.88);
+  }
+
+  &__list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    // above is to center the list in the middle of nav-bar-box. Anyway, 3 lines above can be used as mixins as it will be used a lot. But not this time.
+
+    transform: translate(-50%, -50%);
+    list-style-type: none;
+    text-shadow: -3px 10px 5px rgba(0, 0, 0, 0.8);
+    text-align: center; // aligning text in the center will have an effect with the transiting when the checkbox is checked.
+    padding-left: 5px solid #fff;
+    width: 100%;
+  }
+
+  &__item {
+    margin: 1em;
+    background-color: rgba(172, 195, 191, 0.5);
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 1.5em;
+      font-weight: 450;
+      color: #fff;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    &__link {
+      &:link,
+      &:visited {
+        font-size: 2.2em;
+        font-weight: 500;
+      }
+    }
+  }
+  @media screen and (min-width: 978px) {
+    &__link {
+      &:link,
+      &:visited {
+        font-size: 2.5em;
+      }
+    }
+  }
+
+  //checkbox hack functionality
+  &__checkbox:checked ~ &__background {
+    //using adjacent general sibling combinator to select the background back to life by using transform: scale to see it. And its number could be changed depending on the screen size.
+    transform: scale(100);
+  }
+
+  //now bring the nav.bar back to life
+  &__checkbox:checked ~ &__nav {
+    opacity: 1;
+    width: 100%;
+  }
+
+  //ICON: is positioned inside button. Here is the making the icon with ::before and ::after pseudo-elements
+  &__icon {
+    position: relative; // setting position: relative for position: absolute of the 3 stripes.
+    margin-top: 1.1em;
+
+    &,
+    &::before,
+    &::after {
+      width: 1em;
+      height: 2px;
+      background-color: #1a1a1a;
+      display: inline-block;
+    }
+    //making the stripes before & after the icon
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+
+      //setting up the transition for the transform: rotate
+      transition: all 0.8s;
+    }
+    //positioning the stripes above and below the "content" of icon
+    &::before {
+      top: -0.4em;
+      background-color: #1a1a1a;
+    }
+    &::after {
+      top: 0.4em;
+      background-color: #1a1a1a;
+    }
+    @media screen and (min-width: 768px) {
+      &,
+      &::before,
+      &::after {
+        width: 1.8em;
+      }
+      &::before {
+        top: -0.5em;
+      }
+      &::after {
+        top: 0.5em;
+      }
+    }
+    @media screen and (min-width: 1440px) {
+      &,
+      &::before,
+      &::after {
+        width: 2em;
+      }
+      &::before {
+        top: -0.6em;
+      }
+      &::after {
+        top: 0.6em;
+      }
+    }
+  }
+  @media screen and (min-width: 768px) {
+    &__icon {
+      margin-top: 1.5em;
+    }
+  }
+
+  //using transform: rotate to make the stripes to spin when the checkbox is checked!
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+  }
+  &__checkbox:checked + &__button &__icon::before {
+    top: 0;
+    transform: rotate(315deg);
+  }
+  &__checkbox:checked + &__button &__icon::after {
+    top: 0;
+    transform: rotate(-315deg);
+  }
+}
