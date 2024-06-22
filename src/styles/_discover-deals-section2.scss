@@ -1,0 +1,219 @@
+// -----------------------------------------------------------------------discover deals section 2----------------------------------------------
+#header-section1 {
+    width: 375px;
+    height: 100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 10px;
+    background-color: rgb(31, 75, 67);
+       
+    /*  @media  (min-width:376px) {
+          width: 100vw; 
+          padding: 30px;
+      } */
+    @media (min-width: 376px) and (max-width: 424px) {
+      width: 420px;
+    }
+  
+    @media (min-width: 425px) and (max-width: 767px) {
+      width: 750px;
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+      width: 1000px;
+    }
+    @media (min-width: 1025px) {
+      width: 100vw;
+      padding: 30px;
+    }
+  
+    .left-side {
+      h1 {
+        font-size: 17px;
+      }
+      p {
+        font-size: small;
+      }
+    }
+  
+    .right-side {
+      a {
+        text-decoration: none;
+        color:white;
+        font-size: smaller;
+  
+        .fa-arrow-right {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+  
+  .main-container1 {
+    width: 375px;
+    height: 1200px;
+    margin: auto;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(31, 75, 67);
+  
+  
+    /*   @media (min-width:376px) {
+         width: 100vw; 
+         height: 500px;
+        flex-direction: row;
+      } */
+    @media (min-width: 376px) and (max-width: 424px) {
+      width: 400px;
+    }
+  
+    @media (min-width: 425px) and (max-width: 767px) {
+      width: 750px;
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+      width: 1000px;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      height: 1000px;
+  
+      padding: 30px;
+    }
+  
+    @media (min-width: 1025px) {
+      width: 100vw;
+      height: 500px;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      font-size: 20px;
+      padding: 30px;
+    }
+    .house1 {
+      width: 360px;
+      height: 350px;
+      margin: auto;
+      margin-top: 20px;
+    }
+  
+    img {
+      width: 360px;
+      height: 250px;
+      margin-left: 5px;
+      border-radius: 9px;
+    }
+  
+    .house-info {
+      margin-top: 10px;
+      color: white;
+      margin-left: 5px;
+      border-bottom: 1px solid grey;
+      font-weight: 300px;
+      opacity: 0.7;
+  
+      @media (min-width: 1025px) {
+          font-size: 20px;
+      }
+  
+      p {
+        margin-bottom: 10px;
+      }
+    }
+    .room-info {
+      display: flex;
+      justify-content: space-evenly;
+      opacity: 0.5;
+    }
+  }
+  
+  .links {
+    width: 375px;
+    height: 50px;
+    color: white;
+    margin: auto;
+    background-color: #f8f5f5;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  
+    @media (min-width: 376px) {
+      width: 100vw;
+    }
+  
+    .circled-links {
+      width: 25px;
+      height: 25px;
+  
+      &:hover {
+        border-radius: 50%;
+        border: 1px solid rgb(31, 75, 67);
+      }
+      .fa-circle {
+        margin-top: 10px;
+      }
+    }
+  }
+  
+  .footer-section {
+    width: 365px;
+    height: 350px;
+    background-color: rgb(231, 200, 115);
+    text-align: center;
+    margin: auto;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 50px;
+  
+    /* @media (min-width: 376px) {
+      width: 95%;
+      height: 250px;
+      margin: auto;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    } */
+    @media (min-width: 376px) and (max-width: 424px) {
+      width: 400px;
+    }
+  
+    @media (min-width: 425px) and (max-width: 767px) {
+      width: 750px;
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+      width: 1000px;
+     
+      height: 250px;
+      margin: auto;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+  
+    @media (min-width: 1025px) {
+      width: 100vw;
+      height: 250px;
+      margin: auto;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+  
+    .right-sec {
+      @media (min-width: 376px) {
+        display: flex;
+        justify-content: space-evenly;
+  
+        .numbers {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+  a {
+    display: flex;
+    justify-content: center;
+  }
+  
