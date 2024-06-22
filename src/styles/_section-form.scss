@@ -1,0 +1,236 @@
+.section-form {
+  &__checkbox {
+    display: none;
+  }
+
+  &__button {
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+    background-color: transparent;
+    color: #1a1a1a;
+
+    position: fixed;
+    top: 1em;
+    left: 1.5em;
+    z-index: 2000;
+    cursor: pointer;
+  }
+  @media screen and (min-width: 376px) and (max-width: 425px) {
+    &__button {
+      left: 2em;
+    }
+  }
+  @media screen and (min-width: 426px) and (max-width: 767px) {
+    &__button {
+      left: 2.5em;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    &__button {
+      height: 3.5em;
+      width: 3.5em;
+      top: 2em;
+      left: 3.5em;
+    }
+  }
+  @media screen and (min-width: 997px) and (max-width: 1440px) {
+    &__button {
+      left: 4.5em;
+      top: 2.5em;
+    }
+  }
+
+  &__background {
+    height: 2.5em;
+    width: 2.5em;
+    border-radius: 50%;
+    background-image: radial-gradient(#e0e0e0, rgba(255, 255, 255, 0.3));
+
+    display: grid;
+    place-items: center;
+
+    position: fixed;
+    top: 1em;
+    left: 1.5em;
+    z-index: 100;
+  }
+
+  @media screen and (min-width: 376px) and (max-width: 425px) {
+    &__background {
+      left: 2em;
+    }
+  }
+  @media screen and (min-width: 426px) and (max-width: 767px) {
+    &__button {
+      left: 2.5em;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    &__background {
+      height: 3.5em;
+      width: 3.5em;
+      top: 2em;
+      left: 3.5em;
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    &__background {
+      left: 4.5em;
+      top: 2.5em;
+    }
+  }
+
+  &__icon {
+    font-weight: bold;
+  }
+  @media screen and (min-width: 425px) {
+    &__icon {
+      font-size: 1.4em;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    &__icon {
+      font-size: 1.8em;
+    }
+  }
+  @media screen and (min-width: 1441px) {
+    &__icon {
+      font-size: 2em;
+    }
+  }
+
+  &__form {
+    width: 0;
+    height: 100vh;
+    background-image: url(../images/grgur-vuckov-Ujn77KM2AGc-unsplash\.jpg);
+    background-size: cover;
+    background-position: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+    z-index: 1001;
+    transition: all 0.6s cubic-bezier(0.34, 0.265, 0.265, 1);
+  }
+
+  &__group {
+    width: 30vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+
+    margin-bottom: 1em;
+
+    & label {
+      background-color: #e0e0e0;
+      padding: 0.3em;
+    }
+
+    &-keyword,
+    &-input,
+    &-type,
+    &-select,
+    &-filter,
+    &-submit {
+      display: block;
+      width: 14em;
+      border-collapse: collapse;
+      color: #1a1a1a;
+      font-size: 1rem;
+      font-weight: bold;
+      transition: all 0.5s;
+    }
+
+    &-input,
+    &-select,
+    &-filter,
+    &-submit {
+      height: 2.5rem;
+      background-color: transparent;
+      border: none;
+      border-bottom: 0.3rem solid rgba(172, 195, 191, 0.5);
+    }
+    &-input::placeholder,
+    &-filter::placeholder {
+      color: #1a1a1a;
+      background-color: rgba(172, 195, 191, 0.5);
+      padding: 0.3em;
+    }
+    &-input:focus,
+    &-filter:focus,
+    &-select:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+      border-bottom: 0.5rem solid #1f4b43;
+    }
+    &-input:focus::placeholder,
+    &-filter:focus::placeholder {
+      background-color: #1a1a1a;
+      color: #e0e0e0;
+      padding: 0.3em;
+    }
+    &-select,
+    &-submit {
+      background-color: #1f4b43;
+      color: #e0e0e0;
+    }
+    &-option {
+      color: #e0e0e0;
+      background-color: #1a1a1a;
+    }
+  }
+  //checkbox section-form
+
+  &__checkbox:checked ~ &__form {
+    opacity: 1;
+    width: 100%;
+  }
+
+  //media query-form-group
+  @media screen and (min-width: 568px) {
+    &__group {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 70vw;
+
+      &-keyword,
+      &-input,
+      &-type,
+      &-select,
+      &-filter,
+      &-submit {
+        width: 18em;
+      }
+    }
+  }
+  @media screen and (min-width: 996px) {
+    &__group {
+      width: 80vw;
+      margin-bottom: 1.5em;
+
+      &-keyword,
+      &-input,
+      &-type,
+      &-select,
+      &-filter,
+      &-submit {
+        width: 20em;
+        font-size: 1.3em;
+      }
+    }
+  }
+}
