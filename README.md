@@ -89,19 +89,19 @@ Have questions or need assistance? Our team is here to help. Reach out to us for
 <img src="./src/images/how-it-works.png" alt="image"   style="width: 360px; height: 390px; margin: 40px;">
 ### Featured Categories in RoyalHomes
 RoyalHomes offers a diverse range of property types to suit every lifestyle and investment opportunity. Whether you're looking for a townhouse, modern villa, apartment, office space, or a shop house, our platform provides comprehensive listings and expert guidance to help you find the ideal property.
-<img src="./images/featured-categories.png" alt="screenshot"   style="width: 900px; height: 320px; margin: 30px;" >
+<img src="./src/images/featured-categories (1).png" alt="screenshot"   style="width: 900px; height: 320px; margin: 30px;" >
 ### Find Properties in Your Desired Cities with RoyalHom
 RoyalHome offers a wide selection of properties across various cities, catering to diverse preferences and lifestyles. Whether you're looking for a home, an investment property, or commercial space, discover what each city has to offer with our comprehensive listings and expert guidance.
-<img src="./images/find-properties.png" alt="image" style="width: 900px; height: 420px; margin: 30px;" >
+<img src="./src/images/find-properties (1).png" alt="image" style="width: 900px; height: 420px; margin: 30px;" >
 ### Discover Our Best Deals at RoyalHome
 At RoyalHome, we curate the best deals in real estate to help you find exceptional properties at competitive prices. Whether you're looking for discounted homes, investment opportunities with high ROI, or special promotions, explore our featured deals and seize your next real estate opportunity.
-<img src="./images/discover-deals.png" alt="image"   style="width: 790px; height: 390px; margin: 30px;">
+<img src="./src/images/discover-deals (1).png" alt="image"   style="width: 790px; height: 390px; margin: 30px;">
 ## Meet Our Team at RoyalHome
 At RoyalHome, we pride ourselves on having a dedicated and talented team committed to providing exceptional service and expertise in the real estate industry.
-<img src="./images/meet-our-team.png" alt="image"   style="width: 1099px; height: 320px; margin: 60px;">
+<img src="./src/images/meet-our-team (2).png" alt="image"   style="width: 1099px; height: 320px; margin: 60px;">
 ### Why You Should Work with Us at RoyalHome
 At RoyalHome, we’re more than just a real estate company—we’re a team of passionate professionals dedicated to transforming the real estate experience. Here are a few reasons why you should consider joining us:
-<img src="./images/work-with-us.png" alt="image"   style="width: 970px; height: 370px; margin: 30px;">
+<img src="./src/images/work-with-us.png" alt="image"   style="width: 970px; height: 370px; margin: 30px;">
 ### Royal LuxuryHome Footer
 The footer of the Royal LuxuryHome website is designed to provide users with easy access to essential information and navigation options.
 ![Royal LuxuryHome Footer](./screenshots/footer.png)
