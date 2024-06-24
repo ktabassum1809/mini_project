@@ -1,0 +1,74 @@
+ *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#find_properties {
+  text-align: left;
+  padding: 20px;
+  background-color: rgb(249, 249, 249);
+}
+.find_properties__items_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+.p3 {
+  text-align: center;
+  padding-top: 50px;
+}
+.find_properties__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.find_properties__item:nth-child(1) {
+  grid-column: 1 / 2;
+  grid-row: 1 / 5;
+}
+.find_properties__item:nth-child(2),
+.find_properties__item:nth-child(3),
+.find_properties__item:nth-child(4),
+.find_properties__item:nth-child(5) {
+  grid-column: auto;
+  grid-row: auto;
+}
+.find_properties__item img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.Find-Properties-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+.Find-Properties-icons img {
+  width: 100px;
+  height: 30px;
+  margin-right: 20px;
+}
+@media (max-width: 768px) {
+  .find_properties__items_container {
+    grid-template-columns: 1fr;
+  }
+  .Find-Properties-icons {
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .Find-Properties-icons img {
+    margin-bottom: 20px;
+  }
+  .find_properties__item:nth-child(1) {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+@media (max-width: 375px) {
+  .find_properties__items_container {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+}
