@@ -29,3 +29,19 @@
   box-sizing: border-box;
 }
 
+.top{
+  display: inline-block;
+  padding: 10px;
+  text-align: center;
+  background-color: #9e841c;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: #655206;
+  }
+
+  a{
+    text-decoration: none;
+    color:black;
+  }
+}
